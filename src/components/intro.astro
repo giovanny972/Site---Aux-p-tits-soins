@@ -1,0 +1,20 @@
+---
+import { Icon } from "astro-icon";
+import ContentSection from "~/components/content-section.astro";
+---
+
+<ContentSection title="Présentation" id="intro">
+  <Icon slot="eyebrow" name="chien" class="h-32" />
+  <Fragment slot="lead">
+    Bienvenue chez <span class="text-primary">Aux p'tits soins</span>, le <span class="text-primary">salon de toilettage</span> moderne d'exception à Fort-de-France, Martinique. Notre équipe <span class="text-primary">passionnée chouchoute</span> vos compagnons à quatre pattes avec expertise et bienveillance. Nous privilégions des soins personnalisés, respectueux de leur bien-être et de leur santé.
+  </Fragment>
+  <div class="grid grid-cols-1">
+    <a
+      href="https://www.google.com/maps/place/Aux+P'tits+Soins/@14.6076211,-61.0601325,19.5z/data=!4m6!3m5!1s0x8c6aa6d83bd091c7:0x7e016b0b04f826b8!8m2!3d14.6074619!4d-61.0598412!16s%2Fg%2F11b6d6p6xh?entry=ttu"
+      class="flex items-center justify-center border-2 border-current px-6 py-4"
+    >
+      <Icon pack="mdi" name="telescope" class="h-8" />
+      <span>Localisation</span>
+    </a>
+  </div>
+</ContentSection>

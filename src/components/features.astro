@@ -1,0 +1,40 @@
+---
+import { Icon } from "astro-icon";
+import ContentSection from "~/components/content-section.astro";
+import type { FeatureItem } from "~/types";
+
+const features: Array<FeatureItem> = [
+
+  {
+    title: "Horaires",
+    description:
+      "🐾 Aux p'tits soins offre des services d'experts du mardi au samedi, de 9h à 17h, en étant fermés le lundi. Offrez à votre cher animal les soins qu'il mérite et contactez-nous dès maintenant pour réserver un rendez-vous et lui offrir une expérience de toilettage inoubliable ! 🐾",
+    icon: "mdi:account-group",
+  },
+   {
+    title: "Nous contacter :",
+    description:
+      " Par téléphone : 📞 0696975663  N'hésitez pas à nous contacter dès maintenant pour offrir à votre adorable compagnon les soins attentionnés et professionnels qu'il mérite ! 🐶🐱🐾",
+    icon: "mdi:account-group",
+  },
+];
+---
+
+<ContentSection title="Horaires" id="features">
+  <Fragment slot="lead">
+    Nos horaires d'<span class="text-primary">ouverture</span> sont valable hors jours<span class="text-primary">férier</span>.
+  </Fragment>
+  <ul class="grid max-w-6xl grid-cols-1">
+    {
+      features.map(({ title, description, icon }) => (
+        <li class="flex flex-col items-center gap-4 border border-default bg-offset p-6">
+          <div class="h-16 w-16 rounded-full border-2 border-current p-3">
+            <Icon name={icon} />
+          </div>
+          <p class="text-center font-extrabold text-xl">{title}</p>
+          <p class="text-center text-offset text-sm">{description}</p>
+        </li>
+      ))
+    }
+  </ul>
+</ContentSection>
